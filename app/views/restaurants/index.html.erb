@@ -1,0 +1,19 @@
+<div class="w-50 text-center">
+  <h1>Restaurants</h1>
+
+  <div id="restaurants">
+
+    <% @restaurants.each do |restaurant| %>
+      <div class="card my-3">
+        <div class="card-body">
+          <h5 class="card-title py-3"><%= link_to restaurant.name, restaurant, class: "link-success link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %></h5>
+          <p class="card-text"><strong>Address: </strong><%= restaurant.address %></p>
+          <p class="card-text"><strong>Phone number: </strong><%= restaurant.phone_number %></p>
+          <p class="card-text"><strong>Category: </strong><%= restaurant.category %></p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
